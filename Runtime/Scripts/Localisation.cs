@@ -45,7 +45,16 @@ namespace Qplaze.DanPie.Localisation
 
             if (languageAsset == null)
             {
-                throw new ArgumentException($"Файл с языком {languageName} не найден.");
+                if (language != SystemLanguage.English)
+                {
+                    Debug.LogWarning($"Файл с языком \"{ResoursesPath}/{languageName}\" не найден. Язык автоматически изменён на Английский.");
+                    LoadLanguage(SystemLanguage.English);
+                    return;
+                }
+                else
+                {
+                    throw new ArgumentException($"Файл с основным языком \"{ResoursesPath}/{languageName}\" не найден!");
+                } 
             }
 
             languageDictionary = ConvertXMLAssetToDictionaty(languageAsset);

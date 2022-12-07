@@ -1,1 +1,0 @@
-# Qplaze.DanPie.Localization
