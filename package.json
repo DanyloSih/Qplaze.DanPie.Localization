@@ -1,0 +1,21 @@
+{
+  "name": "com.qplaze.danpie-localization",
+  "version": "1.0.0",
+  "displayName": "DanPie Localization",
+  "description": "Localization for Qplaze game projects.",
+  "unity": "2020.3",
+  "unityRelease": "22f1",
+  "documentationUrl": "http://office.qplaze.com/danil.sigaev/danpie-localization",
+  "changelogUrl": "http://office.qplaze.com/danil.sigaev/danpie-localization",
+  "licensesUrl": "http://office.qplaze.com/danil.sigaev/danpie-localization",
+ "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "author": {
+    "name": "Danylo Sigaev",
+    "email": "danil.sigaev@qplaze.com",
+    "url": "http://office.qplaze.com/danil.sigaev/danpie-localization"
+  }
+}
