@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Xml;
-using static UnityEditor.PlayerSettings.Switch;
 
 namespace Qplaze.DanPie.Localization
 {
