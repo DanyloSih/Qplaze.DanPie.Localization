@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Qplaze.DanPie.Localisation
+namespace Qplaze.DanPie.Localization
 {
     public abstract class TextLocalizator : MonoBehaviour
     {
@@ -10,21 +10,21 @@ namespace Qplaze.DanPie.Localisation
 
         protected void Awake()
         {
-            Localisation.LanguageChanged += OnLanguageChanged;
+            Localization.LanguageChanged += OnLanguageChanged;
             OnAwake();
         }
 
         protected void OnDestroy()
         {
-            Localisation.LanguageChanged -= OnLanguageChanged;
+            Localization.LanguageChanged -= OnLanguageChanged;
             OnDestroying();
         }
 
         protected void OnEnable()
         {
-            if (Localisation.IsLoaded)
+            if (Localization.IsLoaded)
             {
-                Text = Localisation.GetString(_wordKey, gameObject);
+                Text = Localization.GetString(_wordKey, gameObject);
             }
             OnEnabling();
         }
@@ -37,7 +37,7 @@ namespace Qplaze.DanPie.Localisation
 
         private void OnLanguageChanged()
         {
-            Text = Localisation.GetString(_wordKey, gameObject);
+            Text = Localization.GetString(_wordKey, gameObject);
         }
     } 
 }

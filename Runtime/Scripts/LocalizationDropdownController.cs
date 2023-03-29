@@ -5,7 +5,7 @@ using UnityEngine;
 using Object = UnityEngine.Object;
 using OptionData = TMPro.TMP_Dropdown.OptionData;
 
-namespace Qplaze.DanPie.Localisation
+namespace Qplaze.DanPie.Localization
 {
     public class LocalizationDropdownController : MonoBehaviour
     {
@@ -17,8 +17,8 @@ namespace Qplaze.DanPie.Localisation
         {
             _dropdown.ClearOptions();
             options.Clear();
-            Object[] languages = Resources.LoadAll(Localisation.ResoursesPath);
-            string currentLanguage = Localisation.GetSavedLanguage().ToString();
+            Object[] languages = Resources.LoadAll(Localization.ResoursesPath);
+            string currentLanguage = Localization.GetSavedLanguage().ToString();
             int currentLanguageValue = 0;
 
             for (int i = 0; i < languages.Length; i++)
@@ -37,7 +37,8 @@ namespace Qplaze.DanPie.Localisation
 
         private void OnDropdownValueChanged(int optionId)
         {
-            Localisation.LoadLanguage((SystemLanguage)Enum.Parse(typeof(SystemLanguage), _dropdown.options[optionId].text));
+            Localization.LoadLanguage((SystemLanguage)Enum.Parse(typeof(SystemLanguage), _dropdown.options[optionId].text));
+            Canvas.ForceUpdateCanvases();
         }
     }
 }

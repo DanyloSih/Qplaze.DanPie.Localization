@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 
-namespace Qplaze.DanPie.Localisation
+namespace Qplaze.DanPie.Localization
 {
 	[RequireComponent(typeof(TextMeshProUGUI))]
 	public class TextMeshProUGUILocalizator : TextLocalizator

@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Xml;
 
-namespace Qplaze.DanPie.Localisation
+namespace Qplaze.DanPie.Localization
 {
-    public class Localisation
+    public class Localization
     {
         public static event Action LanguageChanged;
 
@@ -35,7 +35,7 @@ namespace Qplaze.DanPie.Localisation
 
         public static string GetStringWithValues(string searchString, params string[] values)
         {
-            return string.Format(Localisation.GetString(searchString), values);
+            return string.Format(Localization.GetString(searchString), values);
         }
 
         public static void LoadLanguage(SystemLanguage language)

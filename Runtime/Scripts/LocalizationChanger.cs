@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Qplaze.DanPie.Localisation
+namespace Qplaze.DanPie.Localization
 {
     public class LocalizationChanger : MonoBehaviour
     {
@@ -8,7 +8,7 @@ namespace Qplaze.DanPie.Localisation
 
         public void ChangeLanguage()
         {
-            Localisation.LoadLanguage(_language);
+            Localization.LoadLanguage(_language);
         }
     }
 }

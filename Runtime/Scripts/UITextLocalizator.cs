@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Qplaze.DanPie.Localisation
+namespace Qplaze.DanPie.Localization
 {
     [RequireComponent(typeof(Text))]
     public class UITextLocalizator : TextLocalizator
