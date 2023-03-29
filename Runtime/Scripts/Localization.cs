@@ -11,9 +11,22 @@ namespace Qplaze.DanPie.Localization
 
         private static Dictionary<string, string> languageDictionary;
 
+        public static SystemLanguage CurrentLanguage { get; private set; } = SystemLanguage.English;
         public static string PlayerPrefsKey { get; private set; } = "GameLanguage";
         public static string ResoursesPath { get; private set; } = "Localizations";
         public static bool IsLoaded { get => languageDictionary != null; }
+
+        public static string GetFormatedValue(int inputValue)
+        {
+            if (CurrentLanguage == SystemLanguage.Arabic)
+            {
+                string strNum = inputValue.ToString(); 
+                char[] arrNum = strNum.ToCharArray();  
+                Array.Reverse(arrNum);
+                return new string(arrNum);
+            }
+            return inputValue.ToString();
+        }
 
         public static string GetString(string searchString, UnityEngine.Object context = null)
         {
@@ -24,7 +37,9 @@ namespace Qplaze.DanPie.Localization
 
             if (languageDictionary.ContainsKey(searchString))
             {
-                return languageDictionary[searchString];
+                return CurrentLanguage == SystemLanguage.Arabic 
+                    ? ArabicFixer.Fix(languageDictionary[searchString], false, false) 
+                    : languageDictionary[searchString];
             }
             else
             {
@@ -60,6 +75,7 @@ namespace Qplaze.DanPie.Localization
             languageDictionary = ConvertXMLAssetToDictionaty(languageAsset);
             LanguageChanged?.Invoke();
             SaveLanguage(language);
+            CurrentLanguage = language;
         }
 
         /// <summary>
