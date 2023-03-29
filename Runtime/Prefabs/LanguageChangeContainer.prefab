@@ -28,6 +28,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5962978158169766547}
   m_RootOrder: 0
@@ -67,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: English
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 60dc877b1aee67a4fb68b1a512a413c4, type: 2}
-  m_sharedMaterial: {fileID: -2746091659659776846, guid: 60dc877b1aee67a4fb68b1a512a413c4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.2
+  m_fontSize: 18
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -164,6 +165,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4173215279515658064}
   m_Father: {fileID: 9127975646901958691}
@@ -305,7 +307,6 @@ GameObject:
   - component: {fileID: 49816915063228842}
   - component: {fileID: 7559722926723803394}
   - component: {fileID: 8418326777831502312}
-  - component: {fileID: 6143369110450881549}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -323,6 +324,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2209504161340403087}
   - {fileID: 1804666720040572247}
@@ -426,19 +428,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6143369110450881549}
-        m_TargetAssemblyTypeName: SkaterFall.Audio.SoundPlayer, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &8418326777831502312
 MonoBehaviour:
@@ -460,20 +450,6 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &6143369110450881549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 478308808111680624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02ac69f1f628874db8cb448ea41b3e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _soundType: 1
-  _isPausable: 0
 --- !u!1 &688656236661115835
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +478,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8358266733598635334}
   m_Father: {fileID: 4182950614179940937}
@@ -582,6 +559,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8373329892108644555}
   m_RootOrder: 0
@@ -621,8 +599,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choose language
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 60dc877b1aee67a4fb68b1a512a413c4, type: 2}
-  m_sharedMaterial: {fileID: -2746091659659776846, guid: 60dc877b1aee67a4fb68b1a512a413c4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4644ca3e6d06e9a44bd7836cdf411c49, type: 2}
+  m_sharedMaterial: {fileID: -2746091659659776846, guid: 4644ca3e6d06e9a44bd7836cdf411c49, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -750,6 +728,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8358266733598635334}
   m_RootOrder: 0
@@ -906,6 +885,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7599256575411236559}
   - {fileID: 5962978158169766547}
@@ -1024,6 +1004,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4182950614179940937}
   m_Father: {fileID: 5962978158169766547}
@@ -1145,6 +1126,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9127975646901958691}
   m_Father: {fileID: 1804666720040572247}

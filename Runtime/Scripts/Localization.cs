@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Xml;
+using static UnityEditor.PlayerSettings.Switch;
 
 namespace Qplaze.DanPie.Localization
 {
@@ -55,6 +56,7 @@ namespace Qplaze.DanPie.Localization
 
         public static void LoadLanguage(SystemLanguage language)
         {
+            CurrentLanguage = language;
             string languageName = Enum.GetName(typeof(SystemLanguage), language);
             TextAsset languageAsset = (TextAsset)Resources.Load($"{ResoursesPath}/{languageName}");
 
@@ -75,7 +77,6 @@ namespace Qplaze.DanPie.Localization
             languageDictionary = ConvertXMLAssetToDictionaty(languageAsset);
             LanguageChanged?.Invoke();
             SaveLanguage(language);
-            CurrentLanguage = language;
         }
 
         /// <summary>
@@ -84,15 +85,15 @@ namespace Qplaze.DanPie.Localization
         /// <returns></returns>
         public static SystemLanguage GetSavedLanguage()
         {
-            if (PlayerPrefs.HasKey(PlayerPrefsKey))
-            {
-                return (SystemLanguage)PlayerPrefs.GetInt(PlayerPrefsKey);
-            }
-            return Application.systemLanguage;
+            CurrentLanguage = (SystemLanguage)PlayerPrefs.GetInt(
+                PlayerPrefsKey, (int)Application.systemLanguage);
+
+            return CurrentLanguage;
         }
 
         private static void SaveLanguage(SystemLanguage language)
         {
+            CurrentLanguage = language;
             PlayerPrefs.SetInt(PlayerPrefsKey, (int)language);
         }
 
